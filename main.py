@@ -68,8 +68,7 @@ def main_menu():
             file_manager.save_project_data_to_json(project_data, json_file_name)
         elif choice == "10":
             json_file_name = input("Enter filename in '.json' format for output: ")
-            loaded_project_data = file_manager.load_project_data_from_json(json_file_name)
-            print(loaded_project_data)
+            file_manager.load_project_data_from_json(json_file_name)
         elif choice == "11":
             print("Goodbye!")
             break

@@ -21,10 +21,10 @@ class TaskManager:
             with open(f"{project_name}.txt", "r") as file:
                 tasks = file.readlines()
                 print(*tasks)
+                return tasks
         except FileNotFoundError:
             print(f"---> {ProjectNotFoundError()}")
             # print(f"---> Project '{project_name}' not found.")
-        return tasks
 
     @staticmethod
     def update_task(project_name, task_name, new_task_name, new_responsible, new_status, new_deadline):
